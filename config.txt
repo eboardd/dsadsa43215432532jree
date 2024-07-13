@@ -1,0 +1,226 @@
+////////////////////////////////////////////////// ///////
+// JMusicBot için yapılandırma //
+////////////////////////////////////////////////// ///////
+// // ile başlayan satırlar dikkate alınmaz //
+// Belirteci ve sahibi ayarlamanız GEREKİR //
+// Eğer ayarlamazsanız diğer tüm öğelerin varsayılan değerleri vardır //
+// En iyi sonuçları elde etmek için Notepad++ ile açın //
+////////////////////////////////////////////////// ///////
+
+
+// Bu, botun oturum açacağı jetonu ayarlar
+// Bu bir bot belirteci OLMALIDIR (kullanıcı belirteçleri çalışmayacaktır)
+// Bot jetonunun nasıl alınacağını bilmiyorsanız lütfen buradaki kılavuza bakın:
+// https://github.com/jagrosh/MusicBot/wiki/Getting-a-Bot-Token
+
+token = TOKEN
+
+
+// Bu botun sahibini belirler
+// Bunun, sahibinin kimliği olması gerekiyor (17-18 haneli bir sayı)
+// https://github.com/jagrosh/MusicBot/wiki/Finding-Your-User-ID
+
+owner = 1179025304421933213 // 1179025304421933213
+
+
+// Bu, botun önekini ayarlar
+// Ön ek komutları kontrol etmek için kullanılır
+// Eğer !! kullanırsanız, play komutu !!play olacaktır
+// Eğer bunu ayarlamazsanız, önek bottan (@Botname play) bahsedecektir.
+
+prefix = "!"
+
+
+// Bunu ayarlarsanız botun varsayılan oyunu değişir
+// Oyun olmaması için bunu NONE olarak ayarlayın
+// Varsayılan oyunu kullanmak için bunu DEFAULT olarak ayarlayın
+// Oyunu "X Oynamak", "X Dinlemek" veya "X İzlemek" yapabilirsiniz
+// burada X başlıktır. Bir eylem eklemezseniz,
+// varsayılan "Oynatılıyor"
+
+game = "DEFAULT"
+
+
+// Bunu ayarlarsanız botun varsayılan durumu değişecektir
+// Geçerli değerler: ONLINE BOŞTA DND GÖRÜNMEZ
+
+status = ONLINE
+
+
+// Bunu true olarak ayarlarsanız, bot o anda çalmakta olan şarkının adını kendi dosyasında listeleyecektir.
+// "Oynatılıyor" durumu. Bunun YALNIZCA bot BİR loncada müzik çalıyorsa işe yarayacağını unutmayın;
+// eğer bot birden fazla loncada oynuyorsa bu işe yaramaz.
+
+songinstatus=false
+
+
+// Bunu ayarlarsanız bot, şunun yanı sıra bu öneki de kullanacaktır:
+//yukarıda verilen
+
+altprefix = "NONE"
+
+
+// Bunları ayarlarsanız çeşitli emojiler değişecektir
+
+success = "🎶"
+warning = "💡"
+error = "🚫"
+loading = "⌚"
+searching = "🔎"
+
+
+// Bunu ayarlarsanız yardımı görüntülemek için kullanılan kelimeyi değiştirirsiniz.
+// Örneğin öneki !! olarak ayarlarsanız ve cmds yardımına yazacaksınız
+// !!cmds yardım metnini görmek için
+
+help = help
+
+
+// Bunu ayarlarsanız, "şu anda oynatılıyor" komutu youtube küçük resimlerini gösterecektir
+// Not: Bunu true olarak ayarlarsanız, şu anda yürütülen kutular YENİLENMEZ
+// Bunun nedeni kutuların yenilenmesinin görüntünün yeniden yüklenmesine neden olmasıdır
+// her seferinde yenilenir.
+
+npimages = false
+
+
+// Bunu ayarlarsanız bot kuyruğu tamamladıktan sonra ses kanalından ayrılmayacaktır.
+// Bir ses kanalına bağlanmanın ek bant genişliği kullandığını unutmayın,
+// dolayısıyla bant genişliği önemliyse bu seçenek önerilmez.
+
+stayinchannel = false
+
+
+// Bu, herhangi bir parçanın yüklenebileceği maksimum saniye miktarını ayarlar. Ayarlanmadıysa veya ayarlanmadıysa
+// sıfırdan küçük veya sıfıra eşit herhangi bir sayı için maksimum süre uzunluğu yoktur. Bu zaman
+// kısıtlama herhangi bir kaynaktan yüklenen şarkılar için geçerlidir.
+
+maxtime = 0
+
+// Bu, bir YouTube'dan yüklenebilecek maksimum şarkı sayfası sayısını ayarlar
+// oynatma listesi. Her sayfada en fazla 100 parça bulunabilir. Daha fazlasını içeren bir çalma listesi oynatma
+// maksimum sayfa sayısını aşan sayfaların yüklenmesi, belirtilen sayfa sayısından sonra durdurulacaktır.
+// Örneğin, maksimum 15 olarak ayarlanmışsa ve bir çalma listesi 1850 parça içeriyorsa,
+// yalnızca ilk 1500 parça (15 sayfa) yüklenecek. Varsayılan olarak bu
+// 10 sayfaya (1000 parça) ayarlandı.
+
+maxytplaylistpages = 10
+
+
+// Bu, o anda çalınan şarkıyı atlamak için oy vermesi gereken kullanıcıların oranını belirler.
+// Lonca sahipleri kendi atlama oranlarını tanımlayabilirler ancak bu, bir loncanın
+// kendi atlama oranını tanımlamadı.
+
+skipratio = 0.55
+
+
+// Bu, botun bir ses kanalında yalnız kalacağı süreyi saniye cinsinden ayarlar.
+// ses kanalından otomatik olarak ayrılır ve kuyruğu temizler. Ayarlanmadıysa veya ayarlanmadıysa
+// sıfırdan küçük veya sıfıra eşit herhangi bir sayıya, bot yalnızken ayrılmayacaktır.
+
+alonetimeuntilstop = 0
+
+
+// Bu, Çalma Listeleri klasörü olarak kullanılacak alternatif bir klasör belirler
+// Bu göreceli veya mutlak bir yol olabilir
+
+playlistsfolder = "Playlists"
+
+
+// Varsayılan olarak, bot çalışıyorsa ve botun yeni bir sürümü varsa, bot sahibine DM gönderir
+// kullanılabilir hale gelir. Bu özelliği devre dışı bırakmak için bunu false olarak ayarlayın.
+
+updatealerts=true
+
+
+// Bunu değiştirmek şarkı sözü sağlayıcısını değiştirir
+// Şu anda mevcut sağlayıcılar: "A-Z Lyrics", "Genius", "MusicMatch", "LyricsFreak"
+// Bu yazıyı yazarken A-Z Lyrics veya MusicMatch'e bağlı kalmanızı tavsiye ederim.
+// Genius şarkı dışı birçok sonuca sahip olma eğiliminde olduğundan bir şeyler elde edebilirsiniz 
+// ne istediğinizle tamamen alakasız.
+// Bir sağlayıcıya katkıda bulunmak istiyorsanız lütfen bkz.
+// https://github.com/jagrosh/JLyrics
+
+lyrics.default = "A-Z Lyrics"
+
+
+// Bu ayarlar, tüm komutlar için özel takma adlar yapılandırmanıza olanak tanır.
+// Virgülle ayırarak birden fazla takma ad verilebilir.
+//
+// Örnek 1: "p" takma adını "oynat" komutunun verilmesi:
+// oynat = [ p ]
+//
+// Örnek 2: "yts" ve "find" takma adlarını "ara" komutunun verilmesi:
+// ara = [ yts, bul ]
+
+aliases {
+  // General commands
+  settings = [ status ]
+
+  // Music commands
+  lyrics = []
+  nowplaying = [ np, current ]
+  play = []
+  playlists = [ pls ]
+  queue = [ list ]
+  remove = [ delete ]
+  scsearch = []
+  search = [ ytsearch ]
+  shuffle = []
+  skip = [ voteskip ]
+
+  // Admin commands
+  prefix = [ setprefix ]
+  setdj = []
+  setskip = [ setskippercent, skippercent, setskipratio ]
+  settc = []
+  setvc = []
+
+  // DJ Commands
+  forceremove = [ forcedelete, modremove, moddelete, modelete ]
+  forceskip = [ modskip ]
+  movetrack = [ move ]
+  pause = []
+  playnext = []
+  queuetype = []
+  repeat = []
+  skipto = [ jumpto ]
+  stop = [ leave ]
+  volume = [ vol ]
+}
+
+
+// Bu, günlüğe kaydetme ayrıntılarını ayarlar.
+// Mevcut seviyeler: kapalı, hata, uyarı, bilgi, hata ayıklama, izleme, tümü
+//
+// Bunu info'da bırakmanız önerilir. Hata ayıklama günlüğü düzeyleri sorun gidermeye yardımcı olabilir,
+// ancak hassas veriler içerebilir.
+
+loglevel = info
+
+
+// Dönüşümler belirli oynatma girişlerini değiştirmek ve bunları farklı türde girişlere dönüştürmek için kullanılır
+// Bunların kullanımı oldukça karmaşıktır ve sınırlı kullanım durumları vardır, ancak teoride kabataslak işlemlere izin verir
+// beyaz listeler veya kara listeler, bazı kaynaklardan dolambaçlı yüklemeler ve işlerin nasıl yürüdüğünün özelleştirilmesi
+// talep edilen.
+//
+// Bunların kurulumu KOLAY DEĞİLDİR, dolayısıyla bunları kullanmak istiyorsanız kodu incelemeniz gerekir 
+// nasıl çalıştıkları ve hangi alanlara ihtiyaç duyulduğu için. Ayrıca bu özelliğin tamamen
+// bunu yapmanın daha iyi bir yolunu bulursam gelecekte kaldırılacaktır.
+
+transforms = {}
+
+
+// Eğer bunu true olarak ayarlarsanız bot sahibi için eval komutunu etkinleştirecektir. Bu komut
+// bot sahibinin botun hesabından rastgele kod çalıştırmasına izin verir.
+//
+// UYARI:
+// Bu komut son derece tehlikeli olabilir. Ne yaptığını bilmiyorsan yapabilirsin
+// Discord sunucunuzda veya bu botun çalıştığı bilgisayarda korkunç sorunlara neden olun
+// Açık. Çalıştırdığınız şeyden tamamen emin olmadığınız sürece bu komutu asla çalıştırmayın.
+//
+// BUNUN NE YAPTIĞINI VEYA NASIL KULLANACAĞINI BİLMİYORSANIZ BUNU ETKİNLEŞTİRMEYİN
+// BİRİ SİZDEN BUNU ETKİNLEŞTİRMENİZİ İSTİYORSA, SİZİ ALDATMAYA ÇALIŞMA 11/10 ŞANSI VARDIR
+
+eval=false
+evalengine="Nashorn"
